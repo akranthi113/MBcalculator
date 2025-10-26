@@ -13,7 +13,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
             color: #fff;
             min-height: 100vh;
             padding: 20px;
@@ -23,7 +23,7 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             width: 100%;
             margin: 0 auto;
         }
@@ -37,7 +37,7 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            background: linear-gradient(90deg, #f7971e, #ffd200);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -45,14 +45,14 @@
         
         .subtitle {
             font-size: 1.1rem;
-            color: #a0a0c0;
+            color: #c0c0e0;
             max-width: 600px;
             margin: 0 auto;
         }
         
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 30px;
@@ -76,7 +76,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #c0c0e0;
+            color: #e0e0ff;
         }
         
         select, input {
@@ -84,7 +84,7 @@
             padding: 12px 15px;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.25);
             color: white;
             font-size: 1rem;
             transition: all 0.3s ease;
@@ -92,28 +92,29 @@
         
         select:focus, input:focus {
             outline: none;
-            border-color: #ff7e5f;
-            box-shadow: 0 0 0 2px rgba(255, 126, 95, 0.3);
+            border-color: #ffd200;
+            box-shadow: 0 0 0 2px rgba(255, 210, 0, 0.3);
         }
         
         .results {
             display: flex;
             gap: 20px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         .result-box {
             flex: 1;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.3);
         }
         
         .result-title {
             font-size: 1rem;
             margin-bottom: 10px;
-            color: #c0c0e0;
+            color: #d0d0e0;
         }
         
         .result-value {
@@ -130,59 +131,11 @@
         }
         
         .mrityu-value {
-            color: #f39c12;
-        }
-        
-        .table-container {
-            overflow-x: auto;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        th {
-            background: rgba(255, 126, 95, 0.2);
-            color: #ff7e5f;
-            font-weight: 600;
-        }
-        
-        tr:nth-child(even) {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .instructions {
-            margin-top: 20px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            font-size: 0.9rem;
-            color: #a0a0c0;
-        }
-        
-        .instructions h3 {
-            color: #ff7e5f;
-            margin-bottom: 10px;
-        }
-        
-        .instructions ul {
-            padding-left: 20px;
-        }
-        
-        .instructions li {
-            margin-bottom: 8px;
+            color: #ffd200;
         }
         
         .btn {
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            background: linear-gradient(90deg, #f7971e, #ffd200);
             color: white;
             border: none;
             padding: 12px 25px;
@@ -196,12 +149,64 @@
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 210, 0, 0.4);
+        }
+        
+        .instructions {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #c0c0c0;
+        }
+        
+        .instructions h3 {
+            color: #ffd200;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ul {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 6px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        th {
+            background: rgba(255, 210, 0, 0.2);
+            color: #ffd200;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
         }
         
         @media (max-width: 768px) {
             .input-group, .results {
                 flex-direction: column;
+            }
+            
+            table {
+                font-size: 0.8rem;
             }
             
             h1 {
@@ -216,7 +221,8 @@
             <h1>Planet MB & Mrityu Bhaga Checker</h1>
             <p class="subtitle">Check if your planet is in Mrityu bagha (MB) and find its Mrityu Bhaga degree</p>
         </header>
-        
+
+        <!-- Planet Input Card -->
         <div class="card">
             <div class="input-group">
                 <div class="input-field">
@@ -238,21 +244,21 @@
                 </div>
                 
                 <div class="input-field">
-                    <label for="sign">Select Sign (1-12):</label>
+                    <label for="sign">Select Sign:</label>
                     <select id="sign">
                         <option value="">-- Select a Sign --</option>
-                        <option value="1">1 - Aries</option>
-                        <option value="2">2 - Taurus</option>
-                        <option value="3">3 - Gemini</option>
-                        <option value="4">4 - Cancer</option>
-                        <option value="5">5 - Leo</option>
-                        <option value="6">6 - Virgo</option>
-                        <option value="7">7 - Libra</option>
-                        <option value="8">8 - Scorpio</option>
-                        <option value="9">9 - Sagittarius</option>
-                        <option value="10">10 - Capricorn</option>
-                        <option value="11">11 - Aquarius</option>
-                        <option value="12">12 - Pisces</option>
+                        <option value="1">Aries</option>
+                        <option value="2">Taurus</option>
+                        <option value="3">Gemini</option>
+                        <option value="4">Cancer</option>
+                        <option value="5">Leo</option>
+                        <option value="6">Virgo</option>
+                        <option value="7">Libra</option>
+                        <option value="8">Scorpio</option>
+                        <option value="9">Sagittarius</option>
+                        <option value="10">Capricorn</option>
+                        <option value="11">Aquarius</option>
+                        <option value="12">Pisces</option>
                     </select>
                 </div>
                 
@@ -276,26 +282,40 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>How to use:</h3>
+            <ul>
+                <li>Select a planet from the dropdown menu</li>
+                <li>Select the zodiac sign where the planet is placed</li>
+                <li>Enter the planet's degrees (1.00 to 30.00)</li>
+                <li>Click "Check Planet" to see results</li>
+                <li>The tool will show if the planet is in Mrityu bagha (MB)</li>
+                <li>It will also display the Mrityu Bhaga degree</li>
+            </ul>
+        </div>
+
+        <!-- MB Degrees Table -->
         <div class="card">
             <h2>Planet MB Degrees Reference</h2>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Planet/Sign</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                            <th>7</th>
-                            <th>8</th>
-                            <th>9</th>
-                            <th>10</th>
-                            <th>11</th>
-                            <th>12</th>
+                            <th>Planet</th>
+                            <th>Aries</th>
+                            <th>Taurus</th>
+                            <th>Gemini</th>
+                            <th>Cancer</th>
+                            <th>Leo</th>
+                            <th>Virgo</th>
+                            <th>Libra</th>
+                            <th>Scorpio</th>
+                            <th>Sagittarius</th>
+                            <th>Capricorn</th>
+                            <th>Aquarius</th>
+                            <th>Pisces</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -312,18 +332,6 @@
                         <tr><td>Ascendant</td><td>01</td><td>09</td><td>22</td><td>22</td><td>25</td><td>02</td><td>04</td><td>23</td><td>18</td><td>20</td><td>24</td><td>10</td></tr>
                     </tbody>
                 </table>
-            </div>
-            
-            <div class="instructions">
-                <h3>How to use:</h3>
-                <ul>
-                    <li>Select a planet from the dropdown menu</li>
-                    <li>Select the zodiac sign (1-12) where the planet is placed</li>
-                    <li>Enter the planet's degrees (1.00 to 30.00)</li>
-                    <li>Click "Check Planet" to see results</li>
-                    <li>The tool will show if the planet is in Mrtiyu bagha degrees (MB) range</li>
-                    <li>It will also display the Mrityu Bhaga degree for that planet in the selected sign</li>
-                </ul>
             </div>
         </div>
     </div>
@@ -371,7 +379,7 @@
             
             const mbDegree = mbData[planet][sign - 1];
             
-            // ✅ Exact degree check
+            // Exact degree check
             const isMB = degrees === mbDegree;
             
             mbResult.textContent = isMB ? 'YES' : 'NO';
