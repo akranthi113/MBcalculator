@@ -329,7 +329,6 @@
     </div>
 
     <script>
-        // MB data from the table
         const mbData = {
             "Sun": [20, 9, 12, 6, 8, 24, 16, 17, 22, 2, 3, 23],
             "Moon": [8, 25, 22, 22, 21, 1, 4, 23, 18, 20, 20, 10],
@@ -344,7 +343,6 @@
             "Ascendant": [1, 9, 22, 22, 25, 2, 4, 23, 18, 20, 24, 10]
         };
 
-        // Get DOM elements
         const planetSelect = document.getElementById('planet');
         const signSelect = document.getElementById('sign');
         const degreesInput = document.getElementById('degrees');
@@ -352,18 +350,15 @@
         const mbResult = document.getElementById('mbResult');
         const mrityuResult = document.getElementById('mrityuResult');
 
-        // Function to check if planet is in MB and get Mrityu Bhaga
         function checkPlanet() {
             const planet = planetSelect.value;
             const sign = parseInt(signSelect.value);
             const degrees = parseFloat(degreesInput.value);
             
-            // Reset results
             mbResult.textContent = '--';
             mbResult.className = 'result-value';
             mrityuResult.textContent = '--';
             
-            // Validate inputs
             if (!planet || isNaN(sign) || isNaN(degrees)) {
                 alert('Please select a planet, sign, and enter degrees');
                 return;
@@ -374,21 +369,17 @@
                 return;
             }
             
-            // Get MB degree for this planet and sign
             const mbDegree = mbData[planet][sign - 1];
             
-            // Check if planet is in MB
-            const isMB = degrees <= mbDegree;
+            // ✅ Exact degree check
+            const isMB = degrees === mbDegree;
             
-            // Display MB result
             mbResult.textContent = isMB ? 'YES' : 'NO';
             mbResult.classList.add(isMB ? 'mb-yes' : 'mb-no');
             
-            // Display Mrityu Bhaga degree
             mrityuResult.textContent = `${mbDegree}°`;
         }
 
-        // Add event listener
         checkBtn.addEventListener('click', checkPlanet);
     </script>
 </body>
